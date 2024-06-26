@@ -1,4 +1,7 @@
-A simple GPA Calculator web application built using React. The application allows college students to calculate their GPA based on a credit weighting grading system.
+### GPA Calculator
+
+## Overview
+The GPA Calculator is a web application that helps college students calculate their GPA based on a weighted grading system. This tool allows users to input their course credits and grades, dynamically calculate their GPA, and receive an appreciation message based on their performance.
 
 ## Features
 
@@ -29,19 +32,6 @@ npm start
 Open your browser and navigate to http://localhost:3000 to see the application in action.
 
 ### Project Structure
-gpa-calculator/
-├── public/
-├── src/
-│   ├── components/
-│   │   ├── SubjectForm.js
-│   │   ├── SubjectList.js
-│   │   ├── GPAResult.js
-│   ├── App.js
-│   ├── App.css
-│   ├── index.js
-├── .gitignore
-├── package.json
-├── README.md
 SubjectForm.js: Component for adding new subjects.
 SubjectList.js: Component for displaying the list of subjects.
 GPAResult.js: Component for displaying the calculated GPA and appreciation message.
