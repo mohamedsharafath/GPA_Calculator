@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import SubjectForm from './SubjectForm';
-import SubjectList from './SubjectList';
-import GPAResult from './GPAResult';
+import SubjectForm from './Components/SubjectForm';
+import SubjectList from './Components/SubjectList';
+import GPAResult from './Components/GPAResult';
 import "./App.css"
 
 function App() {
