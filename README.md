@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+A simple GPA Calculator web application built using React. The application allows college students to calculate their GPA based on a credit weighting grading system.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
 
-## Available Scripts
+- Add subjects with their respective credits and grades.
+- Edit or delete existing subjects.
+- Calculate GPA based on the entered subjects.
+- Display GPA result along with an appreciation message based on the GPA score.
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js
+- npm (Node Package Manager)
 
-### `npm test`
+### Installing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+git clone https://github.com/your-username/gpa-calculator.git
+2.Navigate to the project directory:
+cd gpa-calculator
+3.Install the dependencies:
+npm install
+4.Start the development server:
+npm start
+Open your browser and navigate to http://localhost:3000 to see the application in action.
 
-### `npm run build`
+### Project Structure
+gpa-calculator/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── SubjectForm.js
+│   │   ├── SubjectList.js
+│   │   ├── GPAResult.js
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+├── .gitignore
+├── package.json
+├── README.md
+SubjectForm.js: Component for adding new subjects.
+SubjectList.js: Component for displaying the list of subjects.
+GPAResult.js: Component for displaying the calculated GPA and appreciation message.
+App.js: Main component where all the components are integrated.
+App.css: Styling for the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Usage
+Adding Subjects:
+Fill in the credits and grade for each subject and click "Add Subject".
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Editing Subjects:
+Click the "Edit" button next to a subject, update the credits and grade, and save the changes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Deleting Subjects:
+Click the "Delete" button next to a subject to remove it from the list.
 
-### `npm run eject`
+Calculating GPA:
+Once all subjects are added, click the "Calculate Result" button to view the GPA and appreciation message.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Appreciation Messages
+The application displays an appreciation message based on the calculated GPA:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+GPA ≥ 9: Outstanding! Keep up the excellent work!
+GPA ≥ 8: Great job! You're doing very well!
+GPA ≥ 7: Good job! Keep pushing forward!
+GPA ≥ 6: Nice work! Keep improving!
+GPA ≥ 5: You're doing okay, but there's room for improvement!
+GPA < 5: Keep trying, and you'll get there!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Contributing
+If you want to contribute to this project, feel free to open issues or submit pull requests. Contributions are welcome!
