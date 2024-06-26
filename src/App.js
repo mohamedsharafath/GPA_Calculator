@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import SubjectForm from './SubjectForm';
+import SubjectList from './SubjectList';
+import GPAResult from './GPAResult';
+import "./App.css"
 
 function App() {
+  const [subjects, setSubjects] = useState([]);
+
+  const addSubject = (subject) => {
+    setSubjects([...subjects, subject]);
+  };
+
+  const updateSubject = (index, updatedSubject) => {
+    const newSubjects = [...subjects];
+    newSubjects[index] = updatedSubject;
+    setSubjects(newSubjects);
+  };
+
+  const deleteSubject = (index) => {
+    const newSubjects = [...subjects];
+    newSubjects.splice(index, 1);
+    setSubjects(newSubjects);
+  };
+
+  const calculateGPA = () => {
+    let totalCredits = 0;
+    let totalGradePoints = 0;
+
+    subjects.forEach(subject => {
+      totalCredits += subject.credits;
+      totalGradePoints += subject.credits * subject.grade;
+    });
+
+    return totalCredits ? (totalGradePoints / totalCredits).toFixed(2) : 0;
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>GPA Calculator</h1>
+      <SubjectForm addSubject={addSubject} />
+      <SubjectList subjects={subjects} updateSubject={updateSubject} deleteSubject={deleteSubject} />
+      <GPAResult gpa={calculateGPA()} />
     </div>
   );
 }
